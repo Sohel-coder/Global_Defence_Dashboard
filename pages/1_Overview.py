@@ -40,10 +40,10 @@ st.markdown("""
         font-weight: 700;
         text-align: center;
         margin-bottom: 1.5rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
     .welcome-text {
-        color: #333333;
+        color: #1a237e;
         font-size: 1.2rem;
         line-height: 1.6;
         text-align: center;
@@ -60,7 +60,7 @@ st.markdown("""
     /* Individual stat card styling */
     .stat-card {
       width = 100px;
-      background: #f0f0f0;   /* card background color (light gray) */
+      background: rgba(0,0,0,0,3);   /* card background color (light gray) */
       padding: 1rem;        /* inner spacing for content */
       text-align: center;   /* center-align text (e.g., numbers/labels) */
       border-radius: 0.5rem; /* rounded corners for aesthetics */
@@ -87,7 +87,7 @@ st.markdown("""
         margin: 2rem 0;
     }
     .feature-card {
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(0, 0, 0, 0.9);
         padding: 1.5rem;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
