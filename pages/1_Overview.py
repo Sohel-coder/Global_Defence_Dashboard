@@ -87,7 +87,7 @@ st.markdown("""
         margin: 2rem 0;
     }
     .feature-card {
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.54);
         padding: 1.5rem;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -104,7 +104,7 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
     .feature-description {
-        color: #555555;
+        color: rgba(255,255,255,0.3);
         font-size: 1rem;
         line-height: 1.5;
     }
