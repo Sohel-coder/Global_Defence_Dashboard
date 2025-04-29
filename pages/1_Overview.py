@@ -44,7 +44,7 @@ st.markdown("""
     }
     .welcome-text {
         color: rgba(255, 255, 255, 0.65);
-        font-size: 1.8rem;
+        font-size: 2.4rem;
         line-height: 1.6;
         text-align: center;
         margin-bottom: 2rem;
