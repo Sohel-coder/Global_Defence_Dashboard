@@ -40,6 +40,7 @@ st.markdown("""
     
     /* Individual stat card styling */
     .stat-card {
+      width = 100px;
       background: #f0f0f0;   /* card background color (light gray) */
       padding: 1rem;        /* inner spacing for content */
       text-align: center;   /* center-align text (e.g., numbers/labels) */
