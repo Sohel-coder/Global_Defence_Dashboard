@@ -68,8 +68,9 @@ st.markdown("""
     }
     .feature-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-rows: 200px;
+        gap: 1.5rem;
         margin: 2rem 0;
     }
     .feature-card {
@@ -98,8 +99,9 @@ st.markdown("""
     }
     .stats-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-rows: 200px;
+        gap: 1.5rem;
         margin: 2rem 0;
     }
     .stat-card {
