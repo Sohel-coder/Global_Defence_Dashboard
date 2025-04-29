@@ -9,11 +9,9 @@ st.markdown(
     """
     <style>
     .stApp {
-      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)); 
       background: url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
                   no-repeat center center fixed;
       background-size: cover;
-      background-color : rgba(0,0,0,0.75);
     }
     [data-testid="stSidebar"] {
       background-color: rgba(0, 0, 0, 0.6);
@@ -30,14 +28,8 @@ st.markdown(
 # Inject custom CSS for welcome page
 st.markdown("""
 <style>
-    .welcome-container {
-        padding: 2rem;
-        border-radius: 15px;
-        margin-bottom: 2rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
     .welcome-title {
-        color: rgba(255,165,0,0.7);
+        color: rgba(255, 153, 51, 1);
         font-size: 2.5rem;
         font-weight: 700;
         text-align: center;
@@ -45,7 +37,7 @@ st.markdown("""
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
     .welcome-text {
-        color: rgba(255,165,0,0.7);
+        color: rgba(255, 153, 51, 1);
         font-size: 1.2rem;
         line-height: 1.6;
         text-align: center;
