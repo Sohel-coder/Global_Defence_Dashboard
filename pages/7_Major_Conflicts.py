@@ -43,11 +43,18 @@ st.markdown(
 )
 
 
-@st.cache_data
-def get_location_name(lat: float, lon: float) -> str:
+import time
+from geopy.exc import GeocoderUnavailable
+
+@st.cache_data(show_spinner=False)
+def get_location_name(lat, lon):
     geolocator = Nominatim(user_agent="conflict_dashboard")
-    loc = geolocator.reverse((lat, lon), language="en")
-    return loc.address if loc else f"{lat:.2f}, {lon:.2f}"
+    try:
+        time.sleep(1.1)   # ensure ≥1 second between calls
+        loc = geolocator.reverse((lat, lon), language="en")
+        return loc.address if loc else f"{lat:.2f}, {lon:.2f}"
+    except GeocoderUnavailable:
+        return f"{lat:.2f}, {lon:.2f}"
 
 
 # --- Load Data ---
