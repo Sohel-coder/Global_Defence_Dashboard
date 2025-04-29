@@ -80,10 +80,10 @@ with tabs[0]:
             fig.add_trace(go.Scatter(
                 x=df_sel.index,
                 y=df_sel[c] / 1e9,
-                mode='lines+markers',
+                mode='lines',              # ← markers removed
                 name=c,
                 hovertemplate=(
-                    f"Country: {c}<br>"
+                    f"Country: {c}<br>"   # ← hard-code country
                     "Year: %{x}<br>"
                     "Exp: %{y:.2f} B USD<extra></extra>"
                 ),
@@ -92,7 +92,11 @@ with tabs[0]:
 
         fig.update_layout(
             template='plotly_dark',
-            xaxis=dict(title='Year', tickmode='array', tickvals=[y for y in df_sel.index if y % 5 == 0]),
+            xaxis=dict(
+                title='Year',
+                tickmode='array',
+                tickvals=[y for y in df_sel.index if y % 5 == 0]
+            ),
             yaxis=dict(title='Expenditure (Billion USD)')
         )
         st.plotly_chart(fig, use_container_width=True)
@@ -154,7 +158,7 @@ with tabs[1]:
         fig_bot.update_layout(template='plotly_dark', yaxis_title='Total (Billion USD)')
         st.plotly_chart(fig_bot, use_container_width=True)
 
-    # Now the two Trends charts, full-width and stacked:
+    # Full-width Trends, with country-name injected
     st.subheader("📈 Trends of Top 5 Spenders Over Time")
     df_top_trend = (
         df[df['Name'].isin(top5.index)][['Name'] + cols_tb]
@@ -167,9 +171,13 @@ with tabs[1]:
         fig_top_trend.add_trace(go.Scatter(
             x=df_top_trend.index,
             y=df_top_trend[country] / 1e9,
-            mode='lines',        # no markers
+            mode='lines',
             name=country,
-            hovertemplate="Country: %{name}<br>Year: %{x}<br>Exp: %{y:.2f} B USD<extra></extra>",
+            hovertemplate=(
+                f"Country: {country}<br>"
+                "Year: %{x}<br>"
+                "Exp: %{y:.2f} B USD<extra></extra>"
+            ),
             hoverlabel=dict(bgcolor='black', font_color='white')
         ))
     fig_top_trend.update_layout(
@@ -191,9 +199,13 @@ with tabs[1]:
         fig_bot_trend.add_trace(go.Scatter(
             x=df_bot_trend.index,
             y=df_bot_trend[country] / 1e9,
-            mode='lines',        # no markers
+            mode='lines',
             name=country,
-            hovertemplate="Country: %{name}<br>Year: %{x}<br>Exp: %{y:.2f} B USD<extra></extra>",
+            hovertemplate=(
+                f"Country: {country}<br>"
+                "Year: %{x}<br>"
+                "Exp: %{y:.2f} B USD<extra></extra>"
+            ),
             hoverlabel=dict(bgcolor='black', font_color='white')
         ))
     fig_bot_trend.update_layout(
