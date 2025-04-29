@@ -33,7 +33,7 @@ st.markdown("""
        /* Container for stat cards: 3-column grid on wide screens, wraps on smaller screens */
     .stats-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      width=100px;
       gap: 1.5rem;           /* consistent gap between cards */
       margin: 2rem 0;        /* optional: space above/below the card row */
     }
