@@ -48,8 +48,7 @@ sum_df_full = df.set_index('Name')[years_all].sum(axis=1)
 tabs = st.tabs([
     "1️⃣ Time Series",
     "2️⃣ Top/Bottom 5",
-    "3️⃣ Trends Over Time",
-    "4️⃣ Global Map"
+    "3️⃣ Global Map"
 ])
 
 # ─── Tab 1: Expenditure Over Time & Single-Year Comparison ────────────
@@ -153,61 +152,59 @@ with tabs[1]:
             yaxis_title='Total (Billion USD)'
         )
         st.plotly_chart(fig_bot, use_container_width=True)
+        
+        st.subheader("📈 Trends of Top 5 Spenders Over Time")
+        df_top_trend = (
+            df[df['Name'].isin(top5.index)]
+            [['Name'] + cols_tb]
+            .set_index('Name').T
+        )
+        df_top_trend.index = df_top_trend.index.astype(int)
+    
+        fig_top_trend = go.Figure()
+        for country in df_top_trend.columns:
+            fig_top_trend.add_trace(go.Scatter(
+                x=df_top_trend.index,
+                y=df_top_trend[country] / 1e9,
+                mode='lines',  # no markers
+                name=country,
+                hovertemplate="Country: %{name}<br>Year: %{x}<br>Exp: %{y:.2f} B USD<extra></extra>",
+                hoverlabel=dict(bgcolor='black', font_color='white')
+            ))
+        fig_top_trend.update_layout(
+            template='plotly_dark',
+            xaxis_title='Year',
+            yaxis_title='Expenditure (Billion USD)'
+        )
+        st.plotly_chart(fig_top_trend, use_container_width=True)
+    
+        st.subheader("📈 Trends of Bottom 5 Spenders Over Time")
+        df_bot_trend = (
+            df[df['Name'].isin(bot5.index)]
+            [['Name'] + cols_tb]
+            .set_index('Name').T
+        )
+        df_bot_trend.index = df_bot_trend.index.astype(int)
+    
+        fig_bot_trend = go.Figure()
+        for country in df_bot_trend.columns:
+            fig_bot_trend.add_trace(go.Scatter(
+                x=df_bot_trend.index,
+                y=df_bot_trend[country] / 1e9,
+                mode='lines',  # no markers
+                name=country,
+                hovertemplate="Country: %{name}<br>Year: %{x}<br>Exp: %{y:.2f} B USD<extra></extra>",
+                hoverlabel=dict(bgcolor='black', font_color='white')
+            ))
+        fig_bot_trend.update_layout(
+            template='plotly_dark',
+            xaxis_title='Year',
+            yaxis_title='Expenditure (Billion USD)'
+        )
+        st.plotly_chart(fig_bot_trend, use_container_width=True)
 
-# ─── Tab 3: Trends Over Time for Top & Bottom 5 ────────────────────────
+# ─── Tab 3: Global Choropleth Map ─────────────────────────────────────
 with tabs[2]:
-    st.subheader("📈 Trends of Top 5 Spenders Over Time")
-    df_top_trend = (
-        df[df['Name'].isin(top5.index)]
-        [['Name'] + cols_tb]
-        .set_index('Name').T
-    )
-    df_top_trend.index = df_top_trend.index.astype(int)
-
-    fig_top_trend = go.Figure()
-    for country in df_top_trend.columns:
-        fig_top_trend.add_trace(go.Scatter(
-            x=df_top_trend.index,
-            y=df_top_trend[country] / 1e9,
-            mode='lines',  # no markers
-            name=country,
-            hovertemplate="Country: %{name}<br>Year: %{x}<br>Exp: %{y:.2f} B USD<extra></extra>",
-            hoverlabel=dict(bgcolor='black', font_color='white')
-        ))
-    fig_top_trend.update_layout(
-        template='plotly_dark',
-        xaxis_title='Year',
-        yaxis_title='Expenditure (Billion USD)'
-    )
-    st.plotly_chart(fig_top_trend, use_container_width=True)
-
-    st.subheader("📈 Trends of Bottom 5 Spenders Over Time")
-    df_bot_trend = (
-        df[df['Name'].isin(bot5.index)]
-        [['Name'] + cols_tb]
-        .set_index('Name').T
-    )
-    df_bot_trend.index = df_bot_trend.index.astype(int)
-
-    fig_bot_trend = go.Figure()
-    for country in df_bot_trend.columns:
-        fig_bot_trend.add_trace(go.Scatter(
-            x=df_bot_trend.index,
-            y=df_bot_trend[country] / 1e9,
-            mode='lines',  # no markers
-            name=country,
-            hovertemplate="Country: %{name}<br>Year: %{x}<br>Exp: %{y:.2f} B USD<extra></extra>",
-            hoverlabel=dict(bgcolor='black', font_color='white')
-        ))
-    fig_bot_trend.update_layout(
-        template='plotly_dark',
-        xaxis_title='Year',
-        yaxis_title='Expenditure (Billion USD)'
-    )
-    st.plotly_chart(fig_bot_trend, use_container_width=True)
-
-# ─── Tab 4: Global Choropleth Map ─────────────────────────────────────
-with tabs[3]:
     st.subheader("🗺 Global Map View")
     year_map = st.slider(
         "Select map year:",
