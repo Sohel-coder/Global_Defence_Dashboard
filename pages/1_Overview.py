@@ -136,10 +136,9 @@ except:
 
 # Render welcome container
 st.markdown('''
-<p class="welcome-text">
-    Explore comprehensive analysis of global military powers, defense budgets, and international trade data 
-    through interactive visualizations and detailed comparisons.
-</p>
+<h4 class="welcome-text">
+    Explore comprehensive analysis of global military powers through interactive visualizations and detailed comparisons.
+</h4>
 ''', unsafe_allow_html=True)
 
 # Statistics section
