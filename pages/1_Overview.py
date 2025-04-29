@@ -30,21 +30,22 @@ st.markdown("""
         text-align: center;
         margin-bottom: 2rem;
     }
+       /* Container for stat cards: 3-column grid on wide screens, wraps on smaller screens */
     .stats-container {
-        display: grid;
-        /* exactly 3 columns, each at least 150px wide but able to grow equally */
-        grid-template-columns: repeat(3, minmax(150px, 1fr));
-        gap: 1rem;
-        margin: 2rem 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;           /* consistent gap between cards */
+      margin: 2rem 0;        /* optional: space above/below the card row */
     }
+    
+    /* Individual stat card styling */
     .stat-card {
-        background: rgba(255, 255, 255, 0.9);
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: transform 0.3s ease;
+      background: #f0f0f0;   /* card background color (light gray) */
+      padding: 1rem;        /* inner spacing for content */
+      text-align: center;   /* center-align text (e.g., numbers/labels) */
+      border-radius: 0.5rem; /* rounded corners for aesthetics */
     }
+
     .stat-card:hover {
         transform: translateY(-5px);
     }
