@@ -43,7 +43,7 @@ st.markdown("""
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
     .welcome-text {
-        color: #1a237e;
+        color: rgba(255,255,255,0.7);
         font-size: 1.2rem;
         line-height: 1.6;
         text-align: center;
@@ -60,7 +60,7 @@ st.markdown("""
     /* Individual stat card styling */
     .stat-card {
       width = 100px;
-      background: rgba(0,0,0,0,3);   /* card background color (light gray) */
+      background: rgba(0,0,0,0,45);   /* card background color (light gray) */
       padding: 1rem;        /* inner spacing for content */
       text-align: center;   /* center-align text (e.g., numbers/labels) */
       border-radius: 0.5rem; /* rounded corners for aesthetics */
