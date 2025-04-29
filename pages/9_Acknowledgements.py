@@ -22,10 +22,10 @@ def set_gif_background(gif_path: str):
             background: url("data:image/gif;base64,{b64}") no-repeat center center fixed;
             background-size: cover;
         }}
-        /* Make all text black and right-aligned */
-        .stApp, .stApp * {{
-            color: black !important;
-            text-align: right !important;
+        /* Apply black, right-aligned text only in the main view container */
+        [data-testid="stAppViewContainer"] {{
+          color: black !important;
+          text-align: right !important;
         }}
         </style>
         """,
@@ -57,10 +57,10 @@ st.markdown(
 
 st.markdown("""
 """, unsafe_allow_html=False)
-st.markdown("""
-**The success of this project is attributed to the dedication, expertise, 
-and collaborative efforts of all the team members of Group 8**
-""", unsafe_allow_html=False)
+st.markdown("""**The success of this project is attributed**""",unsafe_allow_html=False) 
+st.markdown("""**to the dedication, expertise,**""", unsafe_allow_html=False)
+st.markdown("""**and collaborative efforts of all**""", unsafe_allow_html=False)
+st.markdown("""**the team members of Group 8**""", unsafe_allow_html=False)
 
 st.markdown("""
 """, unsafe_allow_html=False)
