@@ -57,10 +57,8 @@ st.markdown(
 
 st.markdown("""
 """, unsafe_allow_html=False)
-st.markdown("""**The success of this project is attributed**""",unsafe_allow_html=False) 
-st.markdown("""**to the dedication, expertise,**""", unsafe_allow_html=False)
-st.markdown("""**and collaborative efforts of all**""", unsafe_allow_html=False)
-st.markdown("""**the team members of Group 8**""", unsafe_allow_html=False)
+st.markdown("""**The success of this project is attributed to the dedication, expertise,**""", unsafe_allow_html=False)
+st.markdown("""**and collaborative efforts of all the team members of Group 8**""", unsafe_allow_html=False)
 
 st.markdown("""
 """, unsafe_allow_html=False)
