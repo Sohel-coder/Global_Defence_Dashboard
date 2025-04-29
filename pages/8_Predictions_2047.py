@@ -131,4 +131,3 @@ ax.set_ylabel('Rank')
 ax.legend()
 st.pyplot(fig)
 
-st.markdown("*Note:* Increased weight to growth slope creates movement in top rankings.")
