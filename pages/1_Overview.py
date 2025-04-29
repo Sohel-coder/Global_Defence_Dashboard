@@ -6,7 +6,7 @@ st.set_page_config(page_title="Art of War - Military Data Analysis", layout="wid
 
 # Load necessary datasets
 def load_data():
-    military_strength = pd.read_csv("data/military_data.csv")
+    military_strength = pd.read_csv("data/2024_military_strength_by_country.csv")
     defense_budget = pd.read_csv("data/Cleaned_Defence_Budget.csv")
     return military_strength, defense_budget
 
