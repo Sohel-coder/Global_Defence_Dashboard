@@ -32,7 +32,8 @@ st.markdown("""
     }
     .stats-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* exactly 3 columns, each at least 150px wide but able to grow equally */
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
         gap: 1rem;
         margin: 2rem 0;
     }
