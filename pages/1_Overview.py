@@ -123,7 +123,7 @@ except:
     formatted_budget = "Data unavailable"
 
 # Render welcome container
-st.markdown('<h1 class="welcome-title' 'style="color:rgba(255, 153, 51, 1);">'Military Data Analysis Platform</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="welcome-title">'Military Data Analysis Platform</h1>', unsafe_allow_html=True)
 st.markdown('''
 <p class="welcome-text">
     Explore comprehensive analysis of global military powers, defense budgets, and international trade data 
