@@ -22,17 +22,16 @@ def set_gif_background(gif_path: str):
             background: url("data:image/gif;base64,{b64}") no-repeat center center fixed;
             background-size: cover;
         }}
+        /* Make all text black and right-aligned */
+        .stApp, .stApp * {{
+            color: black !important;
+            text-align: right !important;
+        }}
         </style>
         """,
         unsafe_allow_html=True,
     )
 set_gif_background("data/Flag_Animation.gif")
-
-
-
-
-
-
 
 st.title("Acknowledgements")
 # Inject custom CSS
