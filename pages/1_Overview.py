@@ -7,12 +7,12 @@ st.set_page_config(page_title="Art of War - Military Data Analysis", layout="wid
 # Load necessary datasets
 def load_data():
     military_strength = pd.read_csv("data/2024_military_strength_by_country.csv")
-    defense_budget = pd.read_csv("data/Cleaned_Defence_Budget.csv")
+    defense_budget    = pd.read_csv("data/Cleaned_Defence_Budget.csv")
     return military_strength, defense_budget
 
 military_strength, defense_budget = load_data()
 
-# Inject custom CSS
+# Inject app‐wide background CSS
 st.markdown(
     """
     <style>
@@ -20,16 +20,14 @@ st.markdown(
     .stApp {
         background: url('https://static.vecteezy.com/system/resources/previews/027/103/278/non_2x/silhouette-soldiers-descend-from-helicopter-warning-of-danger-against-a-sunset-background-with-space-for-text-promoting-peace-and-cessation-of-hostilities-free-photo.jpg')
                     no-repeat center center fixed;
-        background-size: cover;  /* show at native resolution, fully visible */
+        background-size: cover;
     }
-
-    /* Make sidebar slightly translucent so the background peeks through */
+    /* Translucent sidebar */
     [data-testid="stSidebar"] {
         background-color: rgba(0, 0, 0, 0.6);
     }
-
-    /* Right-aligned hero text */
-    .css-1lcbmhc {  /* you may need to adjust this selector to match your Streamlit version */
+    /* Center hero text */
+    .css-1lcbmhc {
         text-align: center !important;
         padding: 1rem 1rem !important;
     }
@@ -38,18 +36,20 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Overview page CSS
-st.markdown("""
-<style>
+# Overview page CSS (welcome + cards)
+st.markdown(
+    """
+    <style>
+    /* Welcome container */
     .welcome-container {
-        background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
-                    url('https://www.armyrecognition.com/images/stories/north_america/united_states/military_equipment/uh-60_black_hawk/UH-60_Black_Hawk_United_States_US_American_army_aviation_helicopter_001.jpg');
+        background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+                    url('https://www.armyrecognition.com/images/stories/north_america/united_states/military_equipment/uh-60_black_hawk/UH-60_Black_Hawk_United_States_US_American_army_aviation_helicopter_001.jpg')
+                    no-repeat center center fixed;
         background-size: cover;
-        background-position: center;
         padding: 2rem;
         border-radius: 15px;
         margin-bottom: 2rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     .welcome-title {
         color: #1a237e;
@@ -57,44 +57,23 @@ st.markdown("""
         font-weight: 700;
         text-align: center;
         margin-bottom: 1.5rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
     .welcome-text {
-        color: #333333;
+        color: #333;
         font-size: 1.2rem;
         line-height: 1.6;
         text-align: center;
         margin-bottom: 2rem;
     }
+
+    /* Feature grid and stat container sizing */
     .feature-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-rows: 200px;
         gap: 1.5rem;
         margin: 2rem 0;
-    }
-    .feature-card {
-        background: url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
-        no-repeat center center fixed;
-        background-size: cover;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-        border-left: 4px solid #1a237e;
-    }
-    .feature-card:hover {
-        transform: translateY(-5px);
-    }
-    .feature-title {
-        color: #1a237e;
-        font-size: 1.3rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-    }
-    .feature-description {
-        color: #555555;
-        font-size: 1rem;
-        line-height: 1.5;
     }
     .stats-container {
         display: grid;
@@ -102,19 +81,44 @@ st.markdown("""
         gap: 1rem;
         margin: 2rem 0;
     }
+
+    /* Shared card styles */
+    .feature-card,
     .stat-card {
-        background: url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
-        no-repeat center center fixed;
+        background:
+            linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+            url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
+            no-repeat center center fixed;
         background-size: cover;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding: 1.5rem;
         border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         transition: transform 0.3s ease;
+        border-left: 4px solid #1a237e;
     }
+    .feature-card:hover,
     .stat-card:hover {
         transform: translateY(-5px);
     }
+
+    /* Feature card text */
+    .feature-title {
+        color: #1a237e;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    .feature-description {
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* Stat card text */
     .stat-value {
         font-size: 2rem;
         font-weight: 700;
@@ -122,10 +126,12 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
     .stat-label {
-        color: #555555;
+        color: #555;
         font-size: 1rem;
         font-weight: 500;
     }
+
+    /* Get Started button */
     .get-started-btn {
         background: linear-gradient(45deg, #1a237e, #3949ab);
         color: white;
@@ -142,41 +148,55 @@ st.markdown("""
     }
     .get-started-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-</style>
-""", unsafe_allow_html=True)
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Begin Welcome Page UI
+st.markdown('<div class="welcome-container">', unsafe_allow_html=True)
 st.markdown('<h1 class="welcome-title">Military Data Analysis Platform</h1>', unsafe_allow_html=True)
 st.markdown('<p class="welcome-text">Explore comprehensive analysis of global military powers, defense budgets, and international trade data through interactive visualizations and detailed comparisons.</p>', unsafe_allow_html=True)
 
 # Key Statistics
 st.markdown('<div class="stats-container">', unsafe_allow_html=True)
-
-# Calculate and display statistics
 total_countries = len(military_strength)
 filtered = military_strength[military_strength['country'] != 'Afghanistan']
 top_power = filtered.sort_values('pwr_index').iloc[0]['country'] if not filtered.empty else 'N/A'
-
-total_budget = defense_budget.set_index('Country Name').filter(regex='^\d{4}$', axis=1).sum().sum()
+total_budget = defense_budget.set_index('Country Name').filter(regex='^\\d{4}$', axis=1).sum().sum()
 formatted_budget = f"${total_budget/1e12:.2f}T"
 
 st.markdown(f'<div class="stat-card"><div class="stat-value">{total_countries}</div><div class="stat-label">Countries Analyzed</div></div>', unsafe_allow_html=True)
 st.markdown(f'<div class="stat-card"><div class="stat-value">{top_power}</div><div class="stat-label">Top Military Power</div></div>', unsafe_allow_html=True)
 st.markdown(f'<div class="stat-card"><div class="stat-value">{formatted_budget}</div><div class="stat-label">Global Defense Spending</div></div>', unsafe_allow_html=True)
-
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Features Overview
 st.markdown('<h2 style="text-align:center; color:#1a237e; margin:2rem 0;">Available Analysis</h2>', unsafe_allow_html=True)
 st.markdown('''
 <div class="feature-grid">
-  <div class="feature-card"><div class="feature-title">Military Strength Comparison</div><div class="feature-description">Compare military capabilities between countries with detailed breakdowns of personnel, equipment, and power indices.</div></div>
-  <div class="feature-card"><div class="feature-title">Defense Budget Analysis</div><div class="feature-description">Track defense expenditure trends over time and analyze budget allocations across different military sectors.</div></div>
-  <div class="feature-card"><div class="feature-title">Defense Companies</div><div class="feature-description">Analyze top defense contractors and their performance in the global military-industrial complex.</div></div>
-  <div class="feature-card"><div class="feature-title">Trade Data</div><div class="feature-description">Explore military exports and imports worldwide with detailed trade flow visualizations.</div></div>
-  <div class="feature-card"><div class="feature-title">2047 Predictions</div><div class="feature-description">View projections of future military power rankings based on current trends and growth trajectories.</div></div>
+  <div class="feature-card">
+    <div class="feature-title">Military Strength Comparison</div>
+    <div class="feature-description">Compare military capabilities between countries with detailed breakdowns of personnel, equipment, and power indices.</div>
+  </div>
+  <div class="feature-card">
+    <div class="feature-title">Defense Budget Analysis</div>
+    <div class="feature-description">Track defense expenditure trends over time and analyze budget allocations across different military sectors.</div>
+  </div>
+  <div class="feature-card">
+    <div class="feature-title">Defense Companies</div>
+    <div class="feature-description">Analyze top defense contractors and their performance in the global military-industrial complex.</div>
+  </div>
+  <div class="feature-card">
+    <div class="feature-title">Trade Data</div>
+    <div class="feature-description">Explore military exports and imports worldwide with detailed trade flow visualizations.</div>
+  </div>
+  <div class="feature-card">
+    <div class="feature-title">2047 Predictions</div>
+    <div class="feature-description">View projections of future military power rankings based on current trends and growth trajectories.</div>
+  </div>
 </div>
 ''', unsafe_allow_html=True)
 
@@ -186,4 +206,5 @@ def begin():
 
 if st.button("Begin Analysis", key="start", on_click=begin):
     pass
+
 st.markdown('</div>', unsafe_allow_html=True)
