@@ -468,7 +468,8 @@ if compare_countries:
         markers=True,
         title="Imports Over Time",
         labels={"import": "Imports (Mil USD)", "year": "Year"},
-        template="plotly_white"
+        template="plotly_white",
+        color_discrete_sequence=["red"] 
     )
     fig_imp.update_layout(
         xaxis=dict(
