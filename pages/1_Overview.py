@@ -98,13 +98,13 @@ st.markdown("""
         transform: translateY(-5px);
     }
     .feature-title {
-        color: #FFFFFF ;
+        color: rgba(19, 136, 8, 1) ;
         font-size: 1.3rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
     }
     .feature-description {
-        color: #EEEEEE;
+        color: rgba(19, 136, 8, 0.4);
         font-size: 1rem;
         line-height: 1.5;
     }
@@ -129,7 +129,7 @@ except:
     formatted_budget = "Data unavailable"
 
 # Render welcome container
-st.markdown('<h1 class="welcome-title;">Military Data Analysis Platform</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="welcome-title;">  Military Data Analysis Platform</h1>', unsafe_allow_html=True)
 st.markdown('''
 <p class="welcome-text">
     Explore comprehensive analysis of global military powers, defense budgets, and international trade data 
