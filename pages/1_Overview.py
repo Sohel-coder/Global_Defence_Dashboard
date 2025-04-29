@@ -12,6 +12,7 @@ st.markdown(
       background: url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
                   no-repeat center center fixed;
       background-size: cover;
+      background-color : rgba(0,0,0,0.75);
     }
     [data-testid="stSidebar"] {
       background-color: rgba(0, 0, 0, 0.6);
