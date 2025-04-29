@@ -3,6 +3,12 @@ import pandas as pd
 
 # Page configuration
 st.set_page_config(page_title="Art of War - Welcome", layout="wide")
+st.markdown(
+    '<h1 style="color: rgba(255, 153, 51, 0.9); text-align: center;">'
+    'Global Defense Data Analysis Platform'
+    '</h1>',
+    unsafe_allow_html=True
+)
 
 # ─── GLOBAL CSS ───────────────────────────────────────────────────────
 st.markdown(
