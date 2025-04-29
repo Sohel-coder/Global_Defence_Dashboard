@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import StrMethodFormatter
 from io import BytesIO
 
-st.set_page_config(page_title="Defence Budget", layout="wide")
+st.set_page_config(page_title="Defense Budget", layout="wide")
 st.title("🌍 Global Defence Budget Insights")
 st.markdown("Explore patterns and trends in military spending across the globe via the tabs below.")
 st.divider()
