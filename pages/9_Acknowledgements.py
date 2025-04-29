@@ -6,7 +6,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed"
 )
-
+set.gif.background("data/Flag_Animation.gif")
 st.title("Acknowledgements")
 # Inject custom CSS
 st.markdown(
