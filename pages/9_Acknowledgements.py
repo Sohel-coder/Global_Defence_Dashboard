@@ -6,6 +6,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed"
 )
+st.image("data/Flag_animation.gif", use_column_width=True)
 
 st.title("Acknowledgements")
 # Inject custom CSS
@@ -51,3 +52,4 @@ st.markdown("""**Kamal Kant Tripathi**""",unsafe_allow_html=False)
 st.markdown("""**Patel Ujjaval Girishbhai**""",unsafe_allow_html=False)
 st.markdown("""**Sohel Samirkhan Modi**""",unsafe_allow_html=False)
 st.markdown("""**Vishal Kumar**""",unsafe_allow_html=False)
+
