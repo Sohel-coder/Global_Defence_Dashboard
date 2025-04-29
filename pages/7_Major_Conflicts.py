@@ -384,8 +384,7 @@ if war:
                 text=f"{war}",
                 showarrow=True,
                 arrowhead=2,
-                ay=-40,
-                font=dict(color="white")
+                ay=-40
             )
 
         # force integer ticks on x, restore y-axis label
