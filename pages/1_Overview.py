@@ -29,7 +29,7 @@ st.markdown(
 st.markdown("""
 <style>
     .welcome-title {
-        color: rgba(255, 153, 51, 1);
+        color: #FFFFFF;
         font-size: 2.5rem;
         font-weight: 700;
         text-align: center;
@@ -37,13 +37,19 @@ st.markdown("""
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
     .welcome-text {
-        color: rgba(255, 153, 51, 1);
+        color: rgba(255, 153, 51, 0.9);
         font-size: 1.2rem;
         line-height: 1.6;
         text-align: center;
         margin-bottom: 2rem;
     }
-       /* Container for stat cards: 3-column grid on wide screens, wraps on smaller screens */
+    /* Section headings (h2) */    
+    .css-1lcbmhc, /* your centered headings */
+    h2 {
+        color: #FF9933 !important;   /* same saffron as body text */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+       
     .stats-container {
       display: grid;
       width=100px;
@@ -66,11 +72,11 @@ st.markdown("""
     .stat-value {
         font-size: 2rem;
         font-weight: 700;
-        color: rgba(255,255,255,0.5);
+        color: #FFFFFF ;
         margin-bottom: 0.5rem;
     }
     .stat-label {
-        color: rgba(255,255,255,1);
+        color: #DDDDDD ;
         font-size: 1rem;
         font-weight: 500;
     }
@@ -92,13 +98,13 @@ st.markdown("""
         transform: translateY(-5px);
     }
     .feature-title {
-        color: #2E8B57;
+        color: #FFFFFF ;
         font-size: 1.3rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
     }
     .feature-description {
-        color: #2E8B57;
+        color: #EEEEEE;
         font-size: 1rem;
         line-height: 1.5;
     }
