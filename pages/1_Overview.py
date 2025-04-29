@@ -91,7 +91,7 @@ st.markdown("""
 
 # Load military strength data
 def load_data():
-    return pd.read_csv("2024_military_strength_by_country.csv")
+    return pd.read_csv("data/2024_military_strength_by_country.csv")
 
 military_strength = load_data()
 
