@@ -144,7 +144,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Begin Welcome Page UI
-st.markdown('<div class="welcome-container">', unsafe_allow_html=True)
 st.markdown('<h1 class="welcome-title">Military Data Analysis Platform</h1>', unsafe_allow_html=True)
 st.markdown('<p class="welcome-text">Explore comprehensive analysis of global military powers, defense budgets, and international trade data through interactive visualizations and detailed comparisons.</p>', unsafe_allow_html=True)
 
