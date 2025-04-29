@@ -9,6 +9,7 @@ st.markdown(
     """
     <style>
     .stApp {
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)); 
       background: url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
                   no-repeat center center fixed;
       background-size: cover;
@@ -88,7 +89,7 @@ st.markdown("""
         margin: 2rem 0;
     }
     .feature-card {
-        background: rgba(0, 0, 0, 0.54);
+        background: rgba(0, 0, 0, 0.5);
         padding: 1.5rem;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -105,7 +106,7 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
     .feature-description {
-        color: rgba(255,255,255,0.3);
+        color: rgba(255,255,255,0.6);
         font-size: 1rem;
         line-height: 1.5;
     }
