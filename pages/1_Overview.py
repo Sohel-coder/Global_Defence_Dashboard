@@ -100,7 +100,7 @@ st.markdown("""
         transform: translateY(-5px);
     }
     .feature-title {
-        color: #1a237e;
+        color: #2E8B57;
         font-size: 1.3rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
