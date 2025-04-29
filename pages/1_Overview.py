@@ -4,12 +4,31 @@ import pandas as pd
 # Page configuration
 st.set_page_config(page_title="Art of War - Welcome", layout="wide")
 
+# ─── GLOBAL CSS ───────────────────────────────────────────────────────
+st.markdown(
+    """
+    <style>
+    .stApp {
+      background: url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
+                  no-repeat center center fixed;
+      background-size: cover;
+    }
+    [data-testid="stSidebar"] {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .css-1lcbmhc {
+      text-align: center !important;
+      padding: 1rem !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # Inject custom CSS for welcome page
 st.markdown("""
 <style>
     .welcome-container {
-        background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
-                    url('https://www.armyrecognition.com/images/stories/north_america/united_states/military_equipment/uh-60_black_hawk/UH-60_Black_Hawk_United_States_US_American_army_aviation_helicopter_001.jpg') center/cover no-repeat;
         padding: 2rem;
         border-radius: 15px;
         margin-bottom: 2rem;
