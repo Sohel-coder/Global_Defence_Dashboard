@@ -73,7 +73,9 @@ st.markdown("""
         margin: 2rem 0;
     }
     .feature-card {
-        background: rgba(255, 255, 255, 0.9);
+        background: url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
+        no-repeat center center fixed;
+        background-size: cover;
         padding: 1.5rem;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -101,7 +103,9 @@ st.markdown("""
         margin: 2rem 0;
     }
     .stat-card {
-        background: rgba(255, 255, 255, 0.9);
+        background: url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
+        no-repeat center center fixed;
+        background-size: cover;
         padding: 1.5rem;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
