@@ -37,7 +37,7 @@ st.markdown("""
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .welcome-title {
-        color: #1a237e;
+        color: rgba(255,165,0,0.7);
         font-size: 2.5rem;
         font-weight: 700;
         text-align: center;
@@ -45,7 +45,7 @@ st.markdown("""
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
     .welcome-text {
-        color: rgba(255,255,255,0.7);
+        color: rgba(255,165,0,0.7);
         font-size: 1.2rem;
         line-height: 1.6;
         text-align: center;
@@ -74,11 +74,11 @@ st.markdown("""
     .stat-value {
         font-size: 2rem;
         font-weight: 700;
-        color: #1a237e;
+        color: rgba(255,255,255,0.5);
         margin-bottom: 0.5rem;
     }
     .stat-label {
-        color: #555555;
+        color: rgba(255,255,255,1);
         font-size: 1rem;
         font-weight: 500;
     }
@@ -106,7 +106,7 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
     .feature-description {
-        color: rgba(255,255,255,0.6);
+        color: #2E8B57;
         font-size: 1rem;
         line-height: 1.5;
     }
@@ -159,7 +159,7 @@ st.markdown(f'''
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Features section
-st.markdown('<h2 style="text-align:center; color:#1a237e; margin:2rem 0;">Available Analysis</h2>', unsafe_allow_html=True)
+st.markdown('<h2 style="text-align:center; color:#2E8B57; margin:2rem 0;">Available Analysis</h2>', unsafe_allow_html=True)
 st.markdown('''
 <div class="feature-grid">
     <div class="feature-card">
