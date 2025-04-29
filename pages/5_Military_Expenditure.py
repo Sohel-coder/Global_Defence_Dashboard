@@ -123,6 +123,7 @@ with tabs[1]:
     top5 = sum_df.nlargest(5)
     bot5 = sum_df[sum_df > 0].nsmallest(5)
 
+    # Top/Bottom side by side
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("**Top 5**")
@@ -133,11 +134,9 @@ with tabs[1]:
             hovertemplate="Country: %{x}<br>Total: %{y:.2f} B USD<extra></extra>",
             hoverlabel=dict(bgcolor='black', font_color='white')
         ))
-        fig_top.update_layout(
-            template='plotly_dark',
-            yaxis_title='Total (Billion USD)'
-        )
+        fig_top.update_layout(template='plotly_dark', yaxis_title='Total (Billion USD)')
         st.plotly_chart(fig_top, use_container_width=True)
+
     with col2:
         st.markdown("**Bottom 5**")
         fig_bot = go.Figure(go.Bar(
@@ -147,61 +146,57 @@ with tabs[1]:
             hovertemplate="Country: %{x}<br>Total: %{y:.2f} B USD<extra></extra>",
             hoverlabel=dict(bgcolor='black', font_color='white')
         ))
-        fig_bot.update_layout(
-            template='plotly_dark',
-            yaxis_title='Total (Billion USD)'
-        )
+        fig_bot.update_layout(template='plotly_dark', yaxis_title='Total (Billion USD)')
         st.plotly_chart(fig_bot, use_container_width=True)
-        
-        st.subheader("📈 Trends of Top 5 Spenders Over Time")
-        df_top_trend = (
-            df[df['Name'].isin(top5.index)]
-            [['Name'] + cols_tb]
-            .set_index('Name').T
-        )
-        df_top_trend.index = df_top_trend.index.astype(int)
-    
-        fig_top_trend = go.Figure()
-        for country in df_top_trend.columns:
-            fig_top_trend.add_trace(go.Scatter(
-                x=df_top_trend.index,
-                y=df_top_trend[country] / 1e9,
-                mode='lines',  # no markers
-                name=country,
-                hovertemplate="Country: %{name}<br>Year: %{x}<br>Exp: %{y:.2f} B USD<extra></extra>",
-                hoverlabel=dict(bgcolor='black', font_color='white')
-            ))
-        fig_top_trend.update_layout(
-            template='plotly_dark',
-            xaxis_title='Year',
-            yaxis_title='Expenditure (Billion USD)'
-        )
-        st.plotly_chart(fig_top_trend, use_container_width=True)
-    
-        st.subheader("📈 Trends of Bottom 5 Spenders Over Time")
-        df_bot_trend = (
-            df[df['Name'].isin(bot5.index)]
-            [['Name'] + cols_tb]
-            .set_index('Name').T
-        )
-        df_bot_trend.index = df_bot_trend.index.astype(int)
-    
-        fig_bot_trend = go.Figure()
-        for country in df_bot_trend.columns:
-            fig_bot_trend.add_trace(go.Scatter(
-                x=df_bot_trend.index,
-                y=df_bot_trend[country] / 1e9,
-                mode='lines',  # no markers
-                name=country,
-                hovertemplate="Country: %{name}<br>Year: %{x}<br>Exp: %{y:.2f} B USD<extra></extra>",
-                hoverlabel=dict(bgcolor='black', font_color='white')
-            ))
-        fig_bot_trend.update_layout(
-            template='plotly_dark',
-            xaxis_title='Year',
-            yaxis_title='Expenditure (Billion USD)'
-        )
-        st.plotly_chart(fig_bot_trend, use_container_width=True)
+
+    # Now the two Trends charts, full-width and stacked:
+    st.subheader("📈 Trends of Top 5 Spenders Over Time")
+    df_top_trend = (
+        df[df['Name'].isin(top5.index)][['Name'] + cols_tb]
+        .set_index('Name').T
+    )
+    df_top_trend.index = df_top_trend.index.astype(int)
+
+    fig_top_trend = go.Figure()
+    for country in df_top_trend.columns:
+        fig_top_trend.add_trace(go.Scatter(
+            x=df_top_trend.index,
+            y=df_top_trend[country] / 1e9,
+            mode='lines',        # no markers
+            name=country,
+            hovertemplate="Country: %{name}<br>Year: %{x}<br>Exp: %{y:.2f} B USD<extra></extra>",
+            hoverlabel=dict(bgcolor='black', font_color='white')
+        ))
+    fig_top_trend.update_layout(
+        template='plotly_dark',
+        xaxis_title='Year',
+        yaxis_title='Expenditure (Billion USD)'
+    )
+    st.plotly_chart(fig_top_trend, use_container_width=True)
+
+    st.subheader("📈 Trends of Bottom 5 Spenders Over Time")
+    df_bot_trend = (
+        df[df['Name'].isin(bot5.index)][['Name'] + cols_tb]
+        .set_index('Name').T
+    )
+    df_bot_trend.index = df_bot_trend.index.astype(int)
+
+    fig_bot_trend = go.Figure()
+    for country in df_bot_trend.columns:
+        fig_bot_trend.add_trace(go.Scatter(
+            x=df_bot_trend.index,
+            y=df_bot_trend[country] / 1e9,
+            mode='lines',        # no markers
+            name=country,
+            hovertemplate="Country: %{name}<br>Year: %{x}<br>Exp: %{y:.2f} B USD<extra></extra>",
+            hoverlabel=dict(bgcolor='black', font_color='white')
+        ))
+    fig_bot_trend.update_layout(
+        template='plotly_dark',
+        xaxis_title='Year',
+        yaxis_title='Expenditure (Billion USD)'
+    )
+    st.plotly_chart(fig_bot_trend, use_container_width=True)
 
 # ─── Tab 3: Global Choropleth Map ─────────────────────────────────────
 with tabs[2]:
