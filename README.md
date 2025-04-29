@@ -14,14 +14,15 @@ This Streamlit app visualizes global military data, including:
 ```
 Home.py           # Main landing page
 pages/            # Each file corresponds to a section of the app
-  1_Defense_Budget.py
+  1_Overview.py
   2_Military_Strength.py
-  3_Trade_Data.py
-  4_Defense_Companies.py
+  3_Major_Conflicts.py
+  4_Defense_Budget.py
   5_Military_Expenditure.py
-  6_Major_Conflicts.py
-  7_Predictions_2047.py
-  8_Acknowledgements.py
+  6_Trade_Data.py
+  7_Defense_Companies.py
+  8_Predictions_2047.py
+  9_Acknowledgements.py
 requirements.txt   # Python dependencies
 README.md          # Project documentation
 ```
