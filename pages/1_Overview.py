@@ -34,7 +34,7 @@ st.markdown(
         padding: 1rem 1rem !important;
     }
 
-    /* Welcome container and feature grid styling omitted for brevity */
+    /* Stat cards styling */
     .stat-card {
         background:
           linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
@@ -64,6 +64,33 @@ st.markdown(
         color: #555555;
         font-size: 1rem;
         font-weight: 500;
+    }
+
+    /* Feature card styling */
+    .feature-card {
+        background: url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
+                    no-repeat center center fixed;
+        background-size: cover;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        border-left: 4px solid #1a237e;
+        min-height: 180px;
+    }
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+    .feature-title {
+        color: #1a237e;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    .feature-description {
+        color: #555555;
+        font-size: 1rem;
+        line-height: 1.5;
     }
     </style>
     """,
@@ -112,17 +139,26 @@ with col3:
         unsafe_allow_html=True
     )
 
-# Features Overview
+# Features Overview using Streamlit columns
 st.markdown('<h2 style="text-align:center; color:#1a237e; margin:2rem 0;">Available Analysis</h2>', unsafe_allow_html=True)
-st.markdown('''
-<div class="feature-grid">
-  <div class="feature-card"><div class="feature-title">Military Strength Comparison</div><div class="feature-description">Compare military capabilities between countries with detailed breakdowns of personnel, equipment, and power indices.</div></div>
-  <div class="feature-card"><div class="feature-title">Defense Budget Analysis</div><div class="feature-description">Track defense expenditure trends over time and analyze budget allocations across different military sectors.</div></div>
-  <div class="feature-card"><div class="feature-title">Defense Companies</div><div class="feature-description">Analyze top defense contractors and their performance in the global military-industrial complex.</div></div>
-  <div class="feature-card"><div class="feature-title">Trade Data</div><div class="feature-description">Explore military exports and imports worldwide with detailed trade flow visualizations.</div></div>
-  <div class="feature-card"><div class="feature-title">2047 Predictions</div><div class="feature-description">View projections of future military power rankings based on current trends and growth trajectories.</div></div>
-</div>
-''', unsafe_allow_html=True)
+
+feat_cols = st.columns(5, gap="large")
+features = [
+    ("Military Strength Comparison", "Compare military capabilities between countries with detailed breakdowns of personnel, equipment, and power indices."),
+    ("Defense Budget Analysis", "Track defense expenditure trends over time and analyze budget allocations across different military sectors."),
+    ("Defense Companies", "Analyze top defense contractors and their performance in the global military-industrial complex."),
+    ("Trade Data", "Explore military exports and imports worldwide with detailed trade flow visualizations."),
+    ("2047 Predictions", "View projections of future military power rankings based on current trends and growth trajectories.")
+]
+
+for col, (title, desc) in zip(feat_cols, features):
+    col.markdown(
+        f'<div class="feature-card">'
+        f'  <div class="feature-title">{title}</div>'
+        f'  <div class="feature-description">{desc}</div>'
+        f'</div>',
+        unsafe_allow_html=True
+    )
 
 # Get Started Button
 def begin():
@@ -130,5 +166,3 @@ def begin():
 
 if st.button("Begin Analysis", key="start", on_click=begin):
     pass
-
-st.markdown('</div>', unsafe_allow_html=True)
