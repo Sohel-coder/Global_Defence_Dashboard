@@ -201,4 +201,4 @@ st.markdown('</div>', unsafe_allow_html=True)
 
 # "Begin Analysis" button navigates via URL query parameter
 if st.button("Begin Analysis"):
-    st.experimental_set_query_params(page="Military Strength")
+    st.query_params(page="Military Strength")
