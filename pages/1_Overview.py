@@ -141,6 +141,11 @@ st.markdown('''
 </h4>
 ''', unsafe_allow_html=True)
 
+# "Begin Analysis" button to navigate to Military Strength section
+if st.button("Begin Analysis", key="begin_analysis"):
+    st.session_state['page'] = 'Military Strength'
+    st.experimental_rerun()
+    
 # Statistics section
 st.markdown('<h2 style="text-align:center; color:#1a237e; margin:2rem 0;">Global Military Overview</h2>', unsafe_allow_html=True)
 st.markdown('<div class="stats-container">', unsafe_allow_html=True)
@@ -185,7 +190,7 @@ st.markdown('''
     <div class="feature-card">
         <div class="feature-title">Trade Data</div>
         <div class="feature-description">
-            Explore military exports and imports worldwide with detailed trade flow visualizations.
+            Explore exports and imports worldwide with detailed trade flow visualizations.
         </div>
     </div>
     <div class="feature-card">
