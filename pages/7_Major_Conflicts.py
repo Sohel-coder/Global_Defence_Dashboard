@@ -345,7 +345,7 @@ if war:
     st.markdown("---")
 
     # ── Tabs ──
-    tab = st.radio("📂 Select Section:", ["📊 Budget Trends","🪖 Military Strength","🗺️ Conflict Map"], horizontal=True)
+    tab = st.radio("Conflict Insights:", ["📊 Budget Trends","🪖 Military Strength","🗺️ Conflict Map"], horizontal=True)
 
     # --- Tab 1: Budget Trends (% of GDP for all parties + checkpoint) ---
     if tab == "📊 Budget Trends":
@@ -375,7 +375,7 @@ if war:
             # vertical line at conflict year
             fig.add_vline(
                 x=year,
-                line=dict(color="black", dash="dash")
+                line=dict(color="white", dash="dash")
             )
             # annotation / pin for conflict
             fig.add_annotation(
@@ -384,7 +384,8 @@ if war:
                 text=f"{war}",
                 showarrow=True,
                 arrowhead=2,
-                ay=-40
+                ay=-40,
+                font=dict(color="white")
             )
 
         # force integer ticks on x, restore y-axis label
