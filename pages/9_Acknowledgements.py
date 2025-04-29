@@ -1,4 +1,26 @@
 import streamlit as st
+import base64
+
+def set_gif_background(gif_path: str):
+    """
+    Reads a local GIF and injects CSS to use it as the <body> background.
+    """
+    with open(gif_path, "rb") as f:
+        data = f.read()
+    b64 = base64.b64encode(data).decode()
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background: url("data:image/gif;base64,{b64}") no-repeat center center fixed;
+            background-size: cover;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+set_gif_background("data/Flag_Animation.gif")
+
 
 
 st.set_page_config(
@@ -6,18 +28,16 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed"
 )
-set.gif.background("data/Flag_Animation.gif")
+
+
+
+
 st.title("Acknowledgements")
 # Inject custom CSS
 st.markdown(
     """
     <style>
     /* Full-screen app container with centered native-size background */
-    .stApp {
-        background-image: url('data/Flag_Animation.gif');
-        background-attachment: fixed;
-        background-size: cover;
-    }
     
     /* Make sidebar slightly translucent so the background peeks through */
     [data-testid="stSidebar"] {
