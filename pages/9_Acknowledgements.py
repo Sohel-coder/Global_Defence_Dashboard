@@ -1,6 +1,13 @@
 import streamlit as st
 import base64
 
+st.set_page_config(
+    page_title="Acknowledgements",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+
 def set_gif_background(gif_path: str):
     """
     Reads a local GIF and injects CSS to use it as the <body> background.
@@ -23,11 +30,6 @@ set_gif_background("data/Flag_Animation.gif")
 
 
 
-st.set_page_config(
-    page_title="Acknowledgements",
-    layout="wide",
-    initial_sidebar_state="collapsed"
-)
 
 
 
