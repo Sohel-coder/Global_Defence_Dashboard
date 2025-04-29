@@ -97,25 +97,29 @@ st.markdown("""
         font-size: 1rem;
         line-height: 1.5;
     }
-    /* Stats in a single row */
+    /* Make the stats container a horizontal flex row */
     .stats-container {
-        display: flex;
+        display: flex !important;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
         margin: 2rem 0;
+        width: 100%;
     }
 
-    /* Transparent card with white text */
+    /* Give each card ~1/3 of the width */
     .stat-card {
+        flex: 1;
+        max-width: calc(33.333% - 1rem);
+        text-align: center;
+        /* preserve your existing styling: */
         background:
-            linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-            url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
-            no-repeat center center fixed;
+          linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+          url('https://t4.ftcdn.net/jpg/03/49/86/71/240_F_349867133_a2Upqgg99LIDvsGbR4Of3a0bXCwqzrAQ.jpg')
+          no-repeat center center fixed;
         background-size: cover;
         min-height: 200px;
-        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -123,8 +127,6 @@ st.markdown("""
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         border-left: 4px solid #1a237e;
-        text-align: center;
-        color: white;
         transition: transform 0.3s ease;
     }
     .stat-card:hover {
