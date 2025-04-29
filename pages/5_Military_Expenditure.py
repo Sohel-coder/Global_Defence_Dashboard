@@ -31,7 +31,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-
 # --- Load and filter data ---
 @st.cache_data
 def load_data():
@@ -52,7 +51,7 @@ if df.empty:
     st.error("❌ No entries with Type='Country'.")
     st.stop()
 
-
+# Year and country lists
 years_all = [str(y) for y in range(1960, 2019)]
 all_countries = sorted(df['Name'].unique())
 default_countries = ['United States', 'China', 'Russian Federation']
@@ -152,6 +151,59 @@ with col2:
     ))
     fig_bot.update_layout(template='plotly_dark', yaxis_title='Total (Billion USD)')
     st.plotly_chart(fig_bot, use_container_width=True)
+
+# --- Trends for Top/Bottom 5 Over Time ---
+st.subheader("📈 Trends of Top 5 Spenders Over Time")
+# Prepare top 5 time series
+df_top_trend = df[df['Name'].isin(top5.index)][['Name'] + cols_tb].set_index('Name').T
+df_top_trend.index = df_top_trend.index.astype(int)
+
+fig_top_trend = go.Figure()
+for country in df_top_trend.columns:
+    fig_top_trend.add_trace(go.Scatter(
+        x=df_top_trend.index,
+        y=df_top_trend[country] / 1e9,
+        mode='lines+markers',
+        name=country,
+        hovertemplate=(
+            "Country: %{name}<br>"
+            "Year: %{x}<br>"
+            "Exp: %{y:.2f} Billion USD<extra></extra>"
+        ),
+        hoverlabel=dict(bgcolor='black', font_color='white')
+    ))
+fig_top_trend.update_layout(
+    template='plotly_dark',
+    xaxis_title='Year',
+    yaxis_title='Expenditure (Billion USD)'
+)
+st.plotly_chart(fig_top_trend, use_container_width=True)
+
+st.subheader("📈 Trends of Bottom 5 Spenders Over Time")
+# Prepare bottom 5 time series
+df_bot_trend = df[df['Name'].isin(bot5.index)][['Name'] + cols_tb].set_index('Name').T
+df_bot_trend.index = df_bot_trend.index.astype(int)
+
+fig_bot_trend = go.Figure()
+for country in df_bot_trend.columns:
+    fig_bot_trend.add_trace(go.Scatter(
+        x=df_bot_trend.index,
+        y=df_bot_trend[country] / 1e9,
+        mode='lines+markers',
+        name=country,
+        hovertemplate=(
+            "Country: %{name}<br>"
+            "Year: %{x}<br>"
+            "Exp: %{y:.2f} Billion USD<extra></extra>"
+        ),
+        hoverlabel=dict(bgcolor='black', font_color='white')
+    ))
+fig_bot_trend.update_layout(
+    template='plotly_dark',
+    xaxis_title='Year',
+    yaxis_title='Expenditure (Billion USD)'
+)
+st.plotly_chart(fig_bot_trend, use_container_width=True)
 
 # --- Global Choropleth on main page ---
 st.subheader("🗺 Global Map View")
