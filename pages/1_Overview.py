@@ -40,7 +40,7 @@ st.markdown("""
         font-weight: 700;
         text-align: center;
         margin-bottom: 1.5rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
     .welcome-text {
         color: #333333;
@@ -129,7 +129,6 @@ except:
     formatted_budget = "Data unavailable"
 
 # Render welcome container
-st.markdown('<div class="welcome-container">', unsafe_allow_html=True)
 st.markdown('<h1 class="welcome-title">Military Data Analysis Platform</h1>', unsafe_allow_html=True)
 st.markdown('''
 <p class="welcome-text">
