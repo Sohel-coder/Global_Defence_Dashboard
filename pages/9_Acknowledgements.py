@@ -6,7 +6,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed"
 )
-st.image("data/Flag_animation.gif", use_column_width=True)
+st.image("data/Flag_Animation.gif", use_container_width=True)
 
 st.title("Acknowledgements")
 # Inject custom CSS
