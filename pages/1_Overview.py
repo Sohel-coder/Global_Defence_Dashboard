@@ -38,7 +38,7 @@ st.markdown("""
     }
     .welcome-text {
         color: rgba(255, 153, 51, 0.9);
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         line-height: 1.6;
         text-align: center;
         margin-bottom: 2rem;
@@ -129,7 +129,6 @@ except:
     formatted_budget = "Data unavailable"
 
 # Render welcome container
-st.markdown('<h1 class="welcome-title;">  Military Data Analysis Platform</h1>', unsafe_allow_html=True)
 st.markdown('''
 <p class="welcome-text">
     Explore comprehensive analysis of global military powers, defense budgets, and international trade data 
