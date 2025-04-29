@@ -82,9 +82,14 @@ with tabs[0]:
                 y=df_sel[c] / 1e9,
                 mode='lines+markers',
                 name=c,
-                hovertemplate="Country: %{name}<br>Year: %{x}<br>Exp: %{y:.2f} B USD<extra></extra>",
+                hovertemplate=(
+                    f"Country: {c}<br>"
+                    "Year: %{x}<br>"
+                    "Exp: %{y:.2f} B USD<extra></extra>"
+                ),
                 hoverlabel=dict(bgcolor='black', font_color='white')
             ))
+
         fig.update_layout(
             template='plotly_dark',
             xaxis=dict(title='Year', tickmode='array', tickvals=[y for y in df_sel.index if y % 5 == 0]),
