@@ -61,10 +61,18 @@ def get_location_name(lat, lon):
 @st.cache_data
 def load_data():
     budget = pd.read_csv("data/Cleaned_Defence_Budget.csv")
-    military_exp = pd.read_excel("data/Military_Expenditure_final_rounded.xlsx")
-    return budget, military_exp
+    exp = pd.read_excel("data/Military_Expenditure_final_rounded.xlsx")
 
-budget_df, exp_df = load_data()
+    # Keep only the country‐level "Military expenditure (current USD)" rows
+    exp = (
+        exp[
+            (exp["Indicator Name"] == "Military expenditure (current USD)")
+            & (exp["Type"] == "Country")
+        ]
+        .copy()
+    )
+
+    return budget, exp
 
 # --- Conflict Metadata (with outcomes) ---
 conflicts = {
@@ -348,6 +356,7 @@ if war:
     tab = st.radio("Conflict Insights:", ["📊 Budget Trends","🪖 Military Strength","🗺️ Conflict Map"], horizontal=True)
 
     # --- Tab 1: Budget Trends (% of GDP for all parties + checkpoint) ---
+        # --- Tab 1: Budget Trends (% of GDP + Army Expenditure on hover) ---
     if tab == "📊 Budget Trends":
         st.subheader(f"📈 Defence Budget (% of GDP) Around {war}")
 
@@ -356,46 +365,50 @@ if war:
         fig = go.Figure()
         all_gdp = []
 
-        # plot each country
         for country in info['countries']:
+            # 1) pull out the %GDP data
             df_c = budget_df[budget_df["Country Name"] == country]
-            if df_c.empty: continue
+            if df_c.empty:
+                continue
+
             tmp = df_c[years].T.reset_index()
-            tmp.columns = ["Year","% of GDP"]
+            tmp.columns = ["Year", "% of GDP"]
             tmp["Year"] = tmp["Year"].astype(int)
+
+            # 2) look up the army expenditure for each of those years
+            army_vals = []
+            for y in tmp["Year"]:
+                row = exp_df.loc[exp_df["Name"] == country, str(y)]
+                army_vals.append(row.values[0] if not row.empty else None)
+            tmp["Army Expenditure"] = army_vals
+
             all_gdp += tmp["% of GDP"].dropna().tolist()
+
+            # 3) add the trace with customdata + hovertemplate
             fig.add_trace(go.Scatter(
-                x=tmp["Year"], y=tmp["% of GDP"],
+                x=tmp["Year"],
+                y=tmp["% of GDP"],
                 mode="lines+markers",
-                name=country
+                name=country,
+                customdata=tmp["Army Expenditure"],
+                hovertemplate=(
+                    "Year %{x}<br>"
+                    "% of GDP: %{y:.2f}%<br>"
+                    "Army Exp: $%{customdata:,.2f}<extra></extra>"
+                )
             ))
 
+        # … keep the rest of your layout code unchanged …
         if all_gdp:
             max_gdp = max(all_gdp)
-            # vertical line at conflict year
-            fig.add_vline(
-                x=year,
-                line=dict(color="white", dash="dash")
-            )
-            # annotation / pin for conflict
+            fig.add_vline(x=year, line=dict(color="white", dash="dash"))
             fig.add_annotation(
-                x=year,
-                y=max_gdp,
-                text=f"{war}",
-                showarrow=True,
-                arrowhead=2,
-                ay=-40
+                x=year, y=max_gdp,
+                text=f"{war}", showarrow=True, arrowhead=2, ay=-40
             )
 
-        # force integer ticks on x, restore y-axis label
-        fig.update_xaxes(
-            tickmode="linear",
-            dtick=1,
-            tickformat="d",
-            title_text="Year"
-        )
+        fig.update_xaxes(tickmode="linear", dtick=1, tickformat="d", title_text="Year")
         fig.update_yaxes(title_text="% of GDP")
-
         fig.update_layout(
             hovermode="x unified",
             template="plotly_white",
