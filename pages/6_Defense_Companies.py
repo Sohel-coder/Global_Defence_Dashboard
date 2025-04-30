@@ -36,14 +36,31 @@ def load_data():
         st.error("Data file not found at data/updated_defense_companies_2005_2020.csv")
         st.stop()
 
-# ─── NORMALIZE COMPANY NAMES ─────────────────────────────────────────
-    df["Company"] = (
-        df["Company"]
-            .str.strip()                                # remove leading/trailing spaces
-            .str.replace(r"\d+$", "", regex=True)      # drop any trailing numbers
-            .str.replace(r"\s{2,}", " ", regex=True)   # collapse multiple spaces
-            .str.title()                                # Title Case every word
-    )
+    # ─── NORMALIZE COMPANY NAMES ────────────────────────────────────────────────
+    # 1. trim whitespace
+    df["Company"] = df["Company"].str.strip()
+
+    # 2. drop trailing numbers
+    df["Company"] = df["Company"].str.replace(r"\d+$", "", regex=True)
+
+    # 3. replace punctuation (hyphens, slashes, periods, commas) with space
+    df["Company"] = df["Company"].str.replace(r"[^\w\s]", " ", regex=True)
+
+    # 4. collapse multiple spaces into one
+    df["Company"] = df["Company"].str.replace(r"\s+", " ", regex=True)
+
+    # 5. lowercase then title-case
+    df["Company"] = df["Company"].str.lower().str.title()
+
+    # ─── OPTIONAL: FUZZY-MAP NEAR-DUPLICATES ────────────────────────────────────
+    # (requires Python stdlib difflib)
+    from difflib import get_close_matches
+    cleaned = {}
+    for name in df["Company"].unique():
+        # try to match against already-accepted names
+        match = get_close_matches(name, cleaned.values(), n=1, cutoff=0.85)
+        cleaned[name] = match[0] if match else name
+    df["Company"] = df["Company"].map(cleaned)
 
     return df
 
