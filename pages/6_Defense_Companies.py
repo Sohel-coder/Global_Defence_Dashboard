@@ -49,7 +49,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["Animations", "Trend", "Sunburst", "Bubble"])
 
 with tab1:
     st.subheader("🎞️ Animated Top Companies by Defense Revenue (2005–2020)")
-    top_n = st.slider("Top N Companies", min_value=5, max_value=30, value=10, key="top_n_anim")
+    top_n = st.slider("Top N Countries", min_value=5, max_value=30, value=10, key="top_n_anim")
     # Animated bar chart: top N by revenue each year
     top_countries_over_time = (
         df.groupby(["Year", "Country"])["Defense_Revenue_From_A_Year_Ago"]
