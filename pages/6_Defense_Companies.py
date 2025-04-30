@@ -31,10 +31,21 @@ st.markdown(
 @st.cache_data
 def load_data():
     try:
-        return pd.read_csv("data/updated_defense_companies_2005_2020.csv")
+        df = pd.read_csv("data/updated_defense_companies_2005_2020.csv")
     except FileNotFoundError:
         st.error("Data file not found at data/updated_defense_companies_2005_2020.csv")
         st.stop()
+
+# ─── NORMALIZE COMPANY NAMES ─────────────────────────────────────────
+    df["Company"] = (
+        df["Company"]
+            .str.strip()                                # remove leading/trailing spaces
+            .str.replace(r"\d+$", "", regex=True)      # drop any trailing numbers
+            .str.replace(r"\s{2,}", " ", regex=True)   # collapse multiple spaces
+            .str.title()                                # Title Case every word
+    )
+
+    return df
 
 # Load dataset
 df = load_data()
