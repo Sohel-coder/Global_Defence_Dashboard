@@ -1,13 +1,13 @@
 Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Revenue_From_Two_Years_Ago,%Defense Revenue Change,Total Revenue,%of Revenue from Defence
-2020,1,Lockheed Martin 1,"James D. Taiclet, President and CEO *",U.S.,56606,50536,12,59812,95
+2020,1,Lockheed Martin,"James D. Taiclet, President and CEO *",U.S.,56606,50536,12,59812,95
 2020,2,Boeing,"David Calhoun, President and CEO *",U.S.,34300,34050,1,76559,45
 2020,3,General Dynamics,"Phebe Novakovic, Chairman and CEO",U.S.,29512,27507,7,39350,75
 2020,4,Northrop Grumman,"Kathy J. Warden, Chairman, CEO and President",U.S.,28600,25300,13,33841,85
 2020,5,Raytheon,"Thomas Kennedy, Chairman and CEO",U.S.,27448,25163.94,9,29200,94
 2020,6,Aviation Industry Corporation of China,"Tan Ruisong, Chairman of the Board, and Luo Ronghuai, President",China,25075.38,24902.01,1,66858.02,38
-2020,7,BAE Systems 1,"Charles Woodburn, Group CEO",U.K.,21033.27,22477.48,-6,23370.3,90
+2020,7,BAE Systems,"Charles Woodburn, Group CEO",U.K.,21033.27,22477.48,-6,23370.3,90
 2020,8,China North Industries Group Corporation Limited,"Jiao Kaihe, Chairman, and Liu Dashan, President",China,14771.6,14777.77,0,68074.15,22
-2020,9,L3Harris Technologies 4,"Bill Brown, Chairman and CEO",U.S.,13916.98,12303.08,13,18074,77
+2020,9,L3Harris Technologies,"Bill Brown, Chairman and CEO",U.S.,13916.98,12303.08,13,18074,77
 2020,10,United Technologies,"Gregory J. Hayes, Chairman and CEO",U.S.,13090,9310,41,77000,17
 2020,11,China Aerospace Science and Industry Corporation,"Yuan Jie, Chairman and Secretary of the Party Committee, and Liu Shiquan, General Manager and President *",China,12035.25,12130.93,-1,37610.17,32
 2020,12,Airbus ,"Guillaume Faury, CEO",Netherlands/France,11266.57,13063.82,-14,78916.36,14
@@ -21,7 +21,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2020,20,China Aerospace Science and Technology Corporation,"Wu Yansheng, Chairman of the Board, Xu Qiang, President, and Fang Xiangming, Executive Director *",China,7745.57,8138.47,-5,36223.21,21
 2020,22,Dassault,"Eric Trappier, Chairman and CEO",France,5708.84,2934.43,95,8171.48,70
 2020,23,Leidos,"Roger Krone, Chairman and CEO",U.S.,5364,5378,0,11094,48
-2020,24,China State Shipbuilding Corporation 6,"Lei Fanpei, Chairman, and Yang Jincheng, Director and General Manager",China,5356.75,4954.07,8,33495.61,16
+2020,24,China State Shipbuilding Corporation,"Lei Fanpei, Chairman, and Yang Jincheng, Director and General Manager",China,5356.75,4954.07,8,33495.61,16
 2020,25,Honeywell,"Darius Adamczyk, Chairman and CEO",U.S.,5326,4665,14,36709,15
 2020,26,Booz Allen Hamilton,"Horacio D. Rozanski, President and CEO",U.S.,5182.96,4700,10,7463.84,69
 2020,27,Rolls-Royce,"Warren East, CEO",U.K.,4712.36,4682.36,1,19725.28,24
@@ -96,13 +96,13 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2020,98,FNSS Savunma Sistemleri A.S.,"Nail Kurt, General Manager and CEO",Turkey,374.94,367.54,2,374.94,100
 2020,99,Havelsan A.S.,"Ahmet Hamdi Atalay, General Manager and CEO",Turkey,295.61,278.6,6,342.27,86
 2020,100,Telephonics Corporation,"Kevin McSweeney, President",U.S.,295.51,288.11,3,2209.29,13
-2019,1,Lockheed Martin 1,"Marillyn Hewson, Chairman, President and CEO",U.S.,50536,47985,5,53762,94
+2019,1,Lockheed Martin,"Marillyn Hewson, Chairman, President and CEO",U.S.,50536,47985,5,53762,94
 2019,2,Boeing,"Dennis Muilenburg, Chairman, President and CEO",U.S.,34050,20561,66,101127,34
 2019,3,Northrop Grumman,"Kathy J. Warden, CEO and President *",U.S.,25300,21700,17,30095,84
 2019,4,Raytheon,"Thomas Kennedy, Chairman and CEO",U.S.,25163.94,23573.64,7,27058,93
 2019,5,Aviation Industry Corporation of China,"Tan Ruisong, Chairman of the Board, and Luo Ronghuai, President",China,24902.01,22898.73,9,66405.36,38
 2019,6,General Dynamics,"Phebe Novakovic, Chairman and CEO",U.S.,24055,19587,23,36200,66
-2019,7,BAE Systems 3,"Charles Woodburn,CEO",U.K.,22477.48,22380.04,0,24569.06,91
+2019,7,BAE Systems,"Charles Woodburn,CEO",U.K.,22477.48,22380.04,0,24569.06,91
 2019,8,China North Industries Group Corporation Limited,"Jiao Kaihe, Chairman, and Liu Dashan, President",China,14777.77,14206.36,4,68100.3,22
 2019,9,Airbus ,"Guillaume Faury, CEO *",Netherlands/France,13063.82,11185.91,17,75220.59,17
 2019,10,China Aerospace Science and Industry Corporation,"Gao Hongwei, Chairman of the Board, and Liu Shiquan, General Manager",China,12130.93,11206.28,8,37909.17,32
@@ -138,7 +138,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2019,40,Perspecta Inc.,"Mac Curtis, President and CEO",U.S.,2817.7,2731.95,3,4274.27,66
 2019,41,Jacobs,"Steve Demetriou, Chair and CEO",U.S.,2800,2600,8,14984.65,19
 2019,42,SAIC,"Nazzic Keene, CEO-elect *",U.S.,2795.4,2761.48,1,4659,60
-2019,43,Hindustan Aeronautics Ltd.,"Raragopalan Madhavan, Chairman and Managing Director *",India,2754.6,2720,1,2930.43,94
+2019,43,Hindustan Aeronautics,"Raragopalan Madhavan, Chairman and Managing Director *",India,2754.6,2720,1,2930.43,94
 2019,44,Israel Aerospace Industries Ltd.,"Nimrod Sheffer, CEO *",Israel,2647,2469,7,3682,72
 2019,45,KNDS,"Frank Haun, Co-CEO, and Stephane Mayer, Co-CEO",France,2597.89,2991.95,-13,2597.89,100
 2019,46,Rafael Advanced Defense Systems Ltd.,"Yoav Har-Even, President and CEO",Israel,2592,2300.06,13,2592,100
@@ -191,7 +191,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2019,95,Denel,"Monhla Hlahla, Chairperson*",South Africa,377.81,621.23,-39,377.81,100
 2019,96,Chemring 1,"Michael Ord, Group Chief Executive",U.K.,336.9,585.51,-42,396.43,85
 2019,97,Telephonics Corporation,"Kevin McSweeney, President",U.S.,288.11,366.91,-21,1977.92,15
-2018,1,Lockheed Martin 1,"Marillyn Hewson, Chairman, President and CEO",U.S.,47985,43468,10,51048,94
+2018,1,Lockheed Martin,"Marillyn Hewson, Chairman, President and CEO",U.S.,47985,43468,10,51048,94
 2018,2,Raytheon,"Thomas Kennedy, Chairman and CEO",U.S.,23573.64,22384.17,5,25348,93
 2018,3,BAE Systems,"Charles Woodburn, CEO",U.K.,22380.04,23621.84,-5,25288.2,88
 2018,4,Northrop Grumman 2,"Wes Bush, Chairman and CEO",U.S.,21700,20200,7,25803,84
@@ -284,9 +284,9 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2018,97,STM Savunma Teknolojileri Muhendislik ve Ticaret A.S.,"Davut Yilmaz, General Manager",Turkey,369.96,342.6,8,414.1,89
 2018,98,Telephonics Corporation,"Kevin McSweeney, President",U.S.,366.91,403.23,-9,1985.91,18
 2018,99,Komatsu ,"Kunio Noji, Chairman",Japan,252.56,884.66,-71,22574.99,1
-2017,1,Lockheed Martin 1,"Marillyn Hewson, Chairman, President and CEO",U.S.,43468,40596,7,47248,92
+2017,1,Lockheed Martin,"Marillyn Hewson, Chairman, President and CEO",U.S.,43468,40596,7,47248,92
 2017,2,Boeing,"Dennis Muilenburg, President and CEO",U.S.,29500,30388,-3,94571,31
-2017,3,BAE Systems 2,"Charles Woodburn, CEO",U.K.,23621.84,25278.08,-7,25867.2,91
+2017,3,BAE Systems,"Charles Woodburn, CEO",U.K.,23621.84,25278.08,-7,25867.2,91
 2017,4,Raytheon ,"Thomas Kennedy, Chairman and CEO",U.S.,22384.17,21619.71,4,24069,93
 2017,5,Northrop Grumman 3,"Wes Bush, Chairman, President and CEO",U.S.,20200,17600,15,24508,82
 2017,6,General Dynamics,"Phebe Novakovic, Chairman and CEO",U.S.,19696,19148,3,31353,63
@@ -305,7 +305,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2017,19,Hanwha,"Seung Youn Kim, Chairman",South Korea,4214.97,3104,36,40523.38,10
 2017,20,Harris Corporation,"Bill Brown, Chairman, President and CEO",U.S.,4213,4400,-4,5950,71
 2017,21,Mitsubishi Heavy Industries,"Shunichi Miyanaga, President and CEO",Japan,4033.48,2395.12,68,34834.6,12
-2017,22,Booz Allen Hamilton 9,"Horacio Rozanski, President and CEO",U.S.,4000,3900,3,5804.28,69
+2017,22,Booz Allen Hamilton,"Horacio Rozanski, President and CEO",U.S.,4000,3900,3,5804.28,69
 2017,23,DCNS Group,"Hervé Guillou, Chairman and CEO",France,3540.9,3288.55,8,3540.9,100
 2017,24,GE Aviation,"David Joyce, President and CEO",U.S.,3500,3700,-5,26000,13
 2017,25,GKN Aerospace 110,"Kevin Cummings, CEO",U.K.,3316.55,2604.65,27,12755.97,26
@@ -381,7 +381,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2017,95,Battelle ,"Jeff Wadsworth, CEO",U.S.,470,476,-1,4800,10
 2017,96,Telephonics Corporation ,"Kevin McSweeney, President",U.S.,403.23,397.68,1,1957.15,21
 2017,100,IHI ,"Tamotsu Saito, CEO",Japan,315.95,563.29,-44,13228.35,2
-2016,1,Lockheed Martin 1 2,"Marillyn Hewson, Chairman, President and CEO",U.S.,40596,40128,1,46132,88
+2016,1,Lockheed Martin,"Marillyn Hewson, Chairman, President and CEO",U.S.,40596,40128,1,46132,88
 2016,2,Boeing,"Dennis Muilenburg, President and CEO",U.S.,30388,29000,5,96114,31.62
 2016,3,BAE Systems,"Ian Graham King, CEO",UK,25278.08,25449,-1,27357.31,92.4
 2016,4,Raytheon ,"Thomas Kennedy, Chairman and CEO",U.S.,21619.71,22228.2,-3,23247,93
@@ -514,7 +514,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2015,35,Exelis,"David Melcher, President & CEO",U.S.,2644,2655,0,3277,80.7
 2015,36,Mitsubishi Heavy Industries,"Shunichi Miyanaga, President & CEO",Japan,2626.7,3354.9,-22,46897,5.6
 2015,37,CACI,"Ken Asbury, President & CEO",U.S.,2578,2735,-6,3565,72.3
-2015,38,Hindustan Aeronautics7,"T. Suvarna Raju, Chairman & Managing Director",India,2480.4,2459,1,2531,98
+2015,38,Hindustan Aeronautics,"T. Suvarna Raju, Chairman & Managing Director",India,2480.4,2459,1,2531,98
 2015,39,Harris,"William Brown, Chairman, President & CEO",U.S.,2384.7,2418,-1,5012,47.6
 2015,40,Hewlett-Packard,"Meg Whitman, Chariman, President & CEO",U.S.,2240.8,4070.4,-45,111500,2
 2015,41,Rockwell Collins13,"Kelly Ortberg, President & CEO",U.S.,2209,2395,-8,4979,44.4
@@ -591,7 +591,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2014,15,Honeywell,"David Cote, Chairman & CEO",U.S.,4900,5100,-4,39055,12.5
 2014,16,DCNS,"Patrick Boissier, Chairman & CEO",France,4601.7,3766.8,22,4601.7,100
 2014,17,Textron,"Scott Donnelly, President & CEO",U.S.,4236.4,4288,-1,12104,35
-2014,18,Booz Allen Hamilton**,"Ralph Shrader, Chairman & CEO",U.S.,4100,4800,-15,5758.1,71.2
+2014,18,Booz Allen Hamilton,"Ralph Shrader, Chairman & CEO",U.S.,4100,4800,-15,5758.1,71.2
 2014,18,GE**,"Jeffrey Immelt, Chairman & CEO",U.S.,4100,4000,2,146045,2.8
 2014,20,Exelis,"David Melcher, President & CEO",U.S.,4093,4251.5,-4,4816,85
 2014,21,Leidos4,"Roger Krone, CEO",U.S.,4080,4680,-13,5772,70.7
@@ -612,7 +612,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2014,36,Bechtel,"Craig Albert, Chairman",U.S.,2600,2500,4,39400,6.6
 2014,37,ATK,"Mark DeYoung, President & CEO",U.S.,2525,3047,-17,4800,52.6
 2014,38,DynCorp,"Steven Gaffney, Chairman & CEO",U.S.,2479.6,3100.3,-20,3287.2,75.4
-2014,39,Hindustan Aero-utics10,"Ravindra Tyagi, Chairman & Ma-ging Director",India,2459,2619.8,-6,2535.1,97
+2014,39,Hindustan Aeronautics,"Ravindra Tyagi, Chairman & Ma-ging Director",India,2459,2619.8,-6,2535.1,97
 2014,40,Harris,"William Brown, Chairman, President & CEO",U.S.,2418,2794.4,-13,5111.7,47.3
 2014,41,CSC,"Mike Lawrie, President & CEO",U.S.,2401,3687,-35,12998,18.5
 2014,42,Rockwell Collins6,"Kelly Ortberg, President & CEO",U.S.,2395,2591,-8,4610,52
@@ -673,9 +673,9 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2014,98,IHI,"Tamotsu Saito, President & CEO",Japan,512,335.2,53,13822.4,3.7
 2014,99,Mission Essential,"Peter Horvath, Chairman & CEO",U.S.,490,797.4,-39,490,100
 2014,100,Griffon6,"Ro-ld J. Kramer, CEO",U.S.,426.2,397.4,7,1871.3,22.8
-2013,1,Lockheed Martin Corporation,"Marillyn Hewson, President & CEO",U.S.,44883,43978,2,47182,95.1
+2013,1,Lockheed Martin,"Marillyn Hewson, President & CEO",U.S.,44883,43978,2,47182,95.1
 2013,2,Boeing,"W. James McNerney, Chairman & CEO",U.S.,31378,30700,2,81698,38.4
-2013,3,BAE,"Ian King, CEO",UK,26813.124,29130.2,-8,28255.201,94.9
+2013,3,BAE Systems,"Ian King, CEO",UK,26813.124,29130.2,-8,28255.201,94.9
 2013,4,Raytheon,"William Swanson, Chairman & CEO",U.S.,22705.02,23055.6,-2,24414,93
 2013,5,General Dy-mics,"Phebe Novakovic, Chairman & CEO",U.S.,21023,23491,-11,31513,66.7
 2013,6,Northrop Grumman Corporation,"Wes Bush, Chairman, President & CEO",U.S.,20600,21400,-4,25218,81.7
@@ -709,7 +709,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2013,34,Harris,"William Brown, President & CEO",U.S.,2794.4,2984.7,-6,5451.3,51.3
 2013,35,Elbit Systems1,"Bezhalel Machlis, President & CEO",Israel,2744.17665,2676.6,3,2888.607,95
 2013,36,Hewlett-Packard,"Meg Whitman, President & CEO",U.S.,2668.822143,2235.9,19,119895,2.2
-2013,37,Hindustan Aero-utics6,"Ravindra Tyagi, Chairman",India,2619.828,2769.6,-5,2619.828,100
+2013,37,Hindustan Aeronautics,"Ravindra Tyagi, Chairman",India,2619.828,2769.6,-5,2619.828,100
 2013,38,Rockwell Collins9,"Clay Jones, Chairman & CEO",U.S.,2591,2813,-8,4726,54.8
 2013,39,Israel Aerospace Industries,"Joseph Weiss, President & CEO",Israel,2553,2508,2,3338,76.5
 2013,40,Bechtel,"Craig Albert, President",U.S.,2500,2400,4,37900,6.6
@@ -1181,7 +1181,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2008,21,DRS Technologies,"Mark Newman, Chairman, President and CEO",U.S.,2736.5,1674.8,63,2821.2,97
 2008,22,Safran,"Jean-Paul BÃ©chat, CEO",France,2640.5,3074.8,-14,14958.7,17.7
 2008,23,Saab Ã…ke,"Svensson, President and CEO",Sweden,2461.9,1941.4,27,3077.5,80
-2008,24,Booz Allen Hamilton 5,"Ralph Shrader, Chairman and CEO",U.S.,2449,2183,12,4000,61.2
+2008,24,Booz Allen Hamilton,"Ralph Shrader, Chairman and CEO",U.S.,2449,2183,12,4000,61.2
 2008,25,Mitsubishi Heavy Industries,"Kazuo Tsukuda, President",Japan,2354.4,2055.9,15,26024.9,9
 2008,26,Textron,"Lewis Campbell, Chairman, President and CEO",U.S.,2088,1400,49,11490,18.2
 2008,27,Rockwell Collins 7,"Clayton Jones, Chairman, President and CEO",U.S.,2043,1810,13,3864,52.9
@@ -1271,7 +1271,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2007,18,ITT Industries,"Steven Loranger, Chairman, President and CEO",U.S.,3220,2414,33,7400,43.5
 2007,19,Safran,"Jean-Paul Bechat, CEO",France,3074.8,3192.1,-4,12527.9,24.5
 2007,20,ATK,"Daniel Murphy, Chairman and CEO",U.S.,2882,2516,15,3217,89.6
-2007,21,Booz Allen Hamilton 4,"Ralph Shrader, Chairman and CEO",U.S.,2183,1767,24,3700,59
+2007,21,Booz Allen Hamilton,"Ralph Shrader, Chairman and CEO",U.S.,2183,1767,24,3700,59
 2007,22,Dassault Aviation,"Charles Edelstenne, Chairman and CEO",France,2108.3,1828.3,15,4062.7,51.9
 2007,23,Mitsubishi Heavy Industries,"Kazuo Tsukuda, President",Japan,2055.9,2516.7,-18,23750,8.7
 2007,24,Saab,"Ã…ke Svensson, President and CEO",Sweden,1941.4,1900,2,2426.9,80
@@ -1370,7 +1370,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2006,25,Saab,"Ã…ke Svensson, President and CEO",Sweden,1900,1380,38,4200,64.3
 2006,26,Rheinmetall,"Klaus Eberhardt, Executive Board Chairman",Germany,1882.8,2014.1,-7,4652.6,40.5
 2006,27,Dassault Aviation,"Charles Edelstenne, Chairman and CEO",France,1828.3,2009.1,-9,4720.8,38.7
-2006,28,Booz Allen Hamilton (5),"Ralph W. Shrader, Chairman and CEO",U.S.,1767,1355,30,3300,53.5
+2006,28,Booz Allen Hamilton ,"Ralph W. Shrader, Chairman and CEO",U.S.,1767,1355,30,3300,53.5
 2006,29,Bechtel ,"Riley Bechtel, Chairman and CEO",U.S.,1742.5,910.4,91,17400,10
 2006,30,SAGEM (9),"GrÃ©goire Olivier, Chairman and CEO",France,1584,1359,17,4870.9,32.5
 2006,31,Electronic Data Systems (3),"Michael H. Jordan, Chairman and CEO",U.S.,1538.3,772.1,99,20669,7.4
@@ -1441,7 +1441,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2005,1,Lockheed Martin,"Vance D. Coffman, Chairman and CEO",U.S.,30097,23337,29,31824,94.6
 2005,2,Boeing,"Harry C. Stonecipher, President and CEO",U.S.,27360,22033,24,50500,54.2
 2005,3,Northrop Grumman,"Ronald D. Sugar, Chairman, CEO, and President",U.S.,18700,12278.1,52,26200,71.4
-2005,4,BAE Systems (1),"Mike Turner, CEO",U.K.,17159,15036.4,14,22359.3,76.7
+2005,4,BAE Systems,"Mike Turner, CEO",U.K.,17159,15036.4,14,22359.3,76.7
 2005,5,Raytheon,"William H. Swanson, Chairman and CEO",U.S.,16896,15291,10,18100,93.3
 2005,6,General Dynamics,"Nicholas D. Chabraja, Chairman and CEO",U.S.,12782,9800,30,16617,76.9
 2005,7,Thales,"Denis Ranque, Chairman and CEO",France,8476,7652.6,11,13310.4,63.7
@@ -1469,7 +1469,7 @@ Year,Rank,Company,Leadership,Country,Defense_Revenue_From_A_Year_Ago,Defense_Rev
 2005,29,Aviation Holding Company Sukhoi (12),"Mikhail Pogosyan, General Director",Russia,1425,988,44,1500,95
 2005,30,Saab,"Ã…ke Svensson, President and CEO",Sweden,1380,1415.7,-3,1725,80
 2005,31,SAGEM,"GrÃ©goire Olivier, Chairman and CEO",France,1359.9,1046.2,30,3993.1,34.1
-2005,32,Booz Allen Hamilton (4),"Ralph W. Shrader, Chairman and CEO",U.S.,1355,1026,32,2700,50.2
+2005,32,Booz Allen Hamilton ,"Ralph W. Shrader, Chairman and CEO",U.S.,1355,1026,32,2700,50.2
 2005,33,Israel Aircraft Industries,"Moshe Keret, President and CEO",Israel,1308,1254,4,1868,70
 2005,34,Goodrich,"Marshall O. Larsen, Chairman, President, and CEO",U.S.,1300,1000,30,4383,29.7
 2005,35,Rockwell Collins (11),"Clayton M. Jones, Chairman, President, and CEO",U.S.,1270,1115,14,2542,50
